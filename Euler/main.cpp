@@ -5,6 +5,7 @@
 #include <boost/range/numeric.hpp>
 #include <boost/range/algorithm/copy.hpp>
 #include <boost/range/algorithm/transform.hpp>
+#include <boost/range/algorithm/mismatch.hpp>
 #include <boost/range/adaptor/filtered.hpp>
 #include <boost/range/adaptor/transformed.hpp>
 #include <boost/coroutine/asymmetric_coroutine.hpp>
@@ -187,7 +188,8 @@ Factors resolve( const std::vector< size_t >& primes )
 
 typedef boost::coroutines::asymmetric_coroutine< size_t > coro_t;
 
-void generate_primes( coro_t::push_type& sink, size_t n, const std::vector< size_t >& primes )
+template< typename F >
+void generate_primes( F&& sink, size_t n, const std::vector< size_t >& primes )
 {
 	assert( primes.back() <= n );
 
@@ -205,7 +207,7 @@ void generate_primes( coro_t::push_type& sink, size_t n, const std::vector< size
 	{
 		const auto primeRemainder = factors.remainders[ primeRemainderIndex ];
 		const auto prime = factors.divisor * primeQuotient + primeRemainder;
-		// sink( prime );
+		sink( prime );
 
 		for( size_t i = 1; i <= factors.divisor; ++i )
 		{
@@ -269,11 +271,39 @@ void generate_primes( coro_t::push_type& sink, size_t n, const std::vector< size
 
 void problem3()
 {
-	coro_t::pull_type source( []( coro_t::push_type& sink ) {
-		generate_primes( sink, 1e9, std::vector< size_t >{ 2, 3, 5 } );
-	} );
-	
-	boost::copy( source, std::ostream_iterator< size_t >( std::cout, ", " ) );
+	const std::vector< size_t > test_result = {
+		2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
+		31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
+		73, 79, 83, 89, 97, 101, 103, 107, 109, 113,
+		127, 131, 137, 139, 149, 151, 157, 163, 167, 173,
+		179, 181, 191, 193, 197, 199, 211, 223, 227, 229,
+		233, 239, 241, 251, 257, 263, 269, 271, 277, 281,
+		283, 293, 307, 311, 313, 317, 331, 337, 347, 349,
+		353, 359, 367, 373, 379, 383, 389, 397, 401, 409,
+		419, 421, 431, 433, 439, 443, 449, 457, 461, 463,
+		467, 479, 487, 491, 499, 503, 509, 521, 523, 541,
+		547, 557, 563, 569, 571, 577, 587, 593, 599, 601,
+		607, 613, 617, 619, 631, 641, 643, 647, 653, 659,
+		661, 673, 677, 683, 691, 701, 709, 719, 727, 733,
+		739, 743, 751, 757, 761, 769, 773, 787, 797, 809,
+		811, 821, 823, 827, 829, 839, 853, 857, 859, 863,
+		877, 881, 883, 887, 907, 911, 919, 929, 937, 941,
+		947, 953, 967, 971, 977, 983, 991, 997
+	};
+
+
+	const auto it = std::next( test_result.begin(), 3 );
+
+	// Check
+	{
+		coro_t::pull_type source( [ &test_result, it ]( coro_t::push_type& sink ) {
+			generate_primes( sink, 1e3, std::vector< size_t >( test_result.begin(), it ) );
+		} );
+
+		std::cout << std::boolalpha << std::equal( it, test_result.end(), boost::begin( source ) ) << std::endl;
+	}
+
+	generate_primes( []( auto&& ) {}, 1e7, std::vector< size_t >( test_result.begin(), it ) );
 }
 
 void main()
