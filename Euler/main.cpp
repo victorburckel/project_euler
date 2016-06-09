@@ -303,7 +303,14 @@ void problem3()
 		std::cout << std::boolalpha << std::equal( it, test_result.end(), boost::begin( source ) ) << std::endl;
 	}
 
-	generate_primes( []( auto&& ) {}, 1e7, std::vector< size_t >( test_result.begin(), it ) );
+	// Perf
+	generate_primes( []( auto&& ) {}, 1e9, std::vector< size_t >( test_result.begin(), it ) );
+
+	// Problem3
+	const auto tester = 600851475143;
+	size_t result;
+	generate_primes( [ tester, &result ]( auto&& prime ) { if( tester % prime == 0 ) result = prime;  }, static_cast< size_t >( std::sqrt( tester ) ), std::vector< size_t >( test_result.begin(), it ) );
+	std::cout << "problem3: " << result << std::endl;
 }
 
 void main()
