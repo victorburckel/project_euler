@@ -1,0 +1,8 @@
+*.psess
+*.vspx
+*.sdf
+*.db
+*.vcxproj.user
+.vs
+Debug
+Release
