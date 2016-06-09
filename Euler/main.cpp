@@ -209,9 +209,9 @@ void generate_primes( F&& sink, size_t n, const std::vector< size_t >& primes )
 		const auto prime = factors.divisor * primeQuotient + primeRemainder;
 		sink( prime );
 
-		for( size_t i = 1; i <= factors.divisor; ++i )
+		for( size_t i = 0; i < nbRemainders; ++i )
 		{
-			const auto multiple = i * prime;
+			const auto multiple = factors.remainders[ i ] * prime;
 			const auto multipleRemainder = multiple % factors.divisor;
 			const auto multipleQuotient = multiple / factors.divisor;
 
