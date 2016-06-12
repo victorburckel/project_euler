@@ -137,7 +137,7 @@
     <ClCompile Include="problem2.cpp" />
     <ClCompile Include="problem3.cpp" />
     <ClCompile Include="problem4.cpp" />
-    <ClCompile Include="problem5.cpp" />
+    <ClCompile Include="problem7.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Test\Test\Base.props" />

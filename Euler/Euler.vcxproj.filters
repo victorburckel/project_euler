@@ -36,11 +36,11 @@
     <ClCompile Include="problem4.cpp">
       <Filter>Fichiers sources\problems</Filter>
     </ClCompile>
-    <ClCompile Include="problem5.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
     <ClCompile Include="primes.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7.cpp">
+      <Filter>Fichiers sources\problems</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
