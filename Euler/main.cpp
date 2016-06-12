@@ -1,13 +1,17 @@
 #include "chunk_iterator.h"
+#include "cross_product_iterator.h"
 #include <boost/algorithm/cxx11/all_of.hpp>
 #include <boost/algorithm/cxx11/none_of.hpp>
 #include <boost/range/irange.hpp>
 #include <boost/range/numeric.hpp>
+#include <boost/range/combine.hpp>
 #include <boost/range/algorithm/copy.hpp>
 #include <boost/range/algorithm/transform.hpp>
+#include <boost/range/algorithm/max_element.hpp>
 #include <boost/range/algorithm/mismatch.hpp>
 #include <boost/range/adaptor/filtered.hpp>
 #include <boost/range/adaptor/transformed.hpp>
+#include <boost/range/adaptor/reversed.hpp>
 #include <boost/coroutine/asymmetric_coroutine.hpp>
 #include <boost/math/common_factor_rt.hpp>
 #include <boost/tuple/tuple_io.hpp>
@@ -292,19 +296,19 @@ void problem3()
 	};
 
 
-	const auto it = std::next( test_result.begin(), 3 );
+	const auto it = std::next( test_result.begin(), 2 );
 
 	// Check
 	{
 		coro_t::pull_type source( [ &test_result, it ]( coro_t::push_type& sink ) {
-			generate_primes( sink, 1e3, std::vector< size_t >( test_result.begin(), it ) );
+			generate_primes( sink, static_cast< size_t >( 1e3 ), std::vector< size_t >( test_result.begin(), it ) );
 		} );
 
 		std::cout << std::boolalpha << std::equal( it, test_result.end(), boost::begin( source ) ) << std::endl;
 	}
 
 	// Perf
-	generate_primes( []( auto&& ) {}, 1e9, std::vector< size_t >( test_result.begin(), it ) );
+	generate_primes( []( auto&& ) {}, static_cast< size_t >( 1e9 ), std::vector< size_t >( test_result.begin(), it ) );
 
 	// Problem3
 	const auto tester = 600851475143;
@@ -313,9 +317,30 @@ void problem3()
 	std::cout << "problem3: " << result << std::endl;
 }
 
+template< class T >
+constexpr T pow( const T & x, std::size_t n )
+{
+	return n > 0 ? x * pow( x, n - 1 ) : 1;
+}
+
+void problem4()
+{
+	struct multiply { auto operator()( std::tuple< int&, int& > element ) const { return std::get< 0 >( element ) * std::get< 1 >( element ); } };
+	struct is_palindrome { bool operator()( int i ) const { auto s = std::to_string( i ); return std::equal( s.begin(), s.end(), s.rbegin() ); } };
+
+	const auto result = *boost::max_element(
+		cross_product( boost::irange( 100, 1000 ), boost::irange( 100, 1000 ) )
+		| boost::adaptors::transformed( multiply() )
+		| boost::adaptors::filtered( is_palindrome() ) 
+	);
+
+	std::cout << "problem4: " << result << std::endl;
+}
+
 void main()
 {
 	//problem1();
 	//problem2();
-	problem3();
+	//problem3();
+	problem4();
 }

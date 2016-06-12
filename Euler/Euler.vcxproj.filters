@@ -26,5 +26,8 @@
     <ClInclude Include="chunk_iterator.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="cross_product_iterator.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
