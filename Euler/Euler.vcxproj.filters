@@ -13,9 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\iterators">
+      <UniqueIdentifier>{aa0bd96c-4279-46d7-9152-e4de955c3fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\problems">
+      <UniqueIdentifier>{deedc962-0e6b-4681-9ca6-3c39aa4efda6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="problem1.cpp">
+      <Filter>Fichiers sources\problems</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2.cpp">
+      <Filter>Fichiers sources\problems</Filter>
+    </ClCompile>
+    <ClCompile Include="problem3.cpp">
+      <Filter>Fichiers sources\problems</Filter>
+    </ClCompile>
+    <ClCompile Include="problem4.cpp">
+      <Filter>Fichiers sources\problems</Filter>
+    </ClCompile>
+    <ClCompile Include="problem5.cpp">
+      <Filter>Fichiers sources\problems</Filter>
+    </ClCompile>
+    <ClCompile Include="primes.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -24,10 +48,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chunk_iterator.h">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers d%27en-tête\iterators</Filter>
     </ClInclude>
     <ClInclude Include="cross_product_iterator.h">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers d%27en-tête\iterators</Filter>
+    </ClInclude>
+    <ClInclude Include="problems.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="primes.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

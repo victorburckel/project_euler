@@ -2,7 +2,7 @@
 
 #include <boost/iterator/iterator_facade.hpp>
 #include <boost/range/iterator_range_core.hpp>
-#include <boost/tuple/tuple.hpp>
+#include <tuple>
 
 template< typename It1, typename It2 >
 class cross_product_iterator : public boost::iterator_facade< cross_product_iterator< It1, It2 >, std::tuple< typename It1::value_type&, typename It2::value_type& >, boost::forward_traversal_tag, std::tuple< typename It1::value_type&, typename It2::value_type& > >

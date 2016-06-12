@@ -3,6 +3,7 @@
 *.sdf
 *.db
 *.vcxproj.user
+*.opendb
 .vs
 Debug
 Release
