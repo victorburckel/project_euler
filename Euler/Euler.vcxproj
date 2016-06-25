@@ -139,6 +139,7 @@
     <ClCompile Include="problem4.cpp" />
     <ClCompile Include="problem7.cpp" />
     <ClCompile Include="problem8.cpp" />
+    <ClCompile Include="problem9.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chunk_iterator.h" />

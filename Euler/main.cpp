@@ -15,5 +15,6 @@ void main()
 	PROBLEM( 4 );
 	PROBLEM( 7 );
 	PROBLEM( 8 );
+	PROBLEM( 9 );
 #undef PROBLEM
 }
