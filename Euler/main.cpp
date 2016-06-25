@@ -8,11 +8,12 @@ void problem5()
 
 void main()
 {
-#define PROBLEM( i ) std::cout << "problem" #i ": " << problem ## i() << std::endl;
+#define PROBLEM( i ) std::cout << "problem" #i ": " << euler::problem ## i() << std::endl;
 	PROBLEM( 1 );
 	PROBLEM( 2 );
 	PROBLEM( 3 );
 	PROBLEM( 4 );
 	PROBLEM( 7 );
+	PROBLEM( 8 );
 #undef PROBLEM
 }

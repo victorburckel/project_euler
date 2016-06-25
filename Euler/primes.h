@@ -1,5 +1,6 @@
 #pragma once
 
+#include "literals.h"
 #include <boost/math/common_factor_rt.hpp>
 #include <boost/range/irange.hpp>
 #include <boost/range/numeric.hpp>
@@ -9,9 +10,6 @@
 #include <boost/dynamic_bitset.hpp>
 #include <vector>
 #include <numeric>
-
-inline size_t operator "" _u( unsigned long long int v ) { return static_cast< size_t >( v ); }
-inline size_t operator "" _u( long double v ) { return static_cast< size_t >( v ); }
 
 struct Factors
 {

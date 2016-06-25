@@ -1,6 +1,7 @@
+#include "problems.h"
 #include <array>
 
-size_t problem2()
+size_t euler::problem2()
 {
 	std::array< size_t, 3 > fibo = { 1, 2, 3 };
 

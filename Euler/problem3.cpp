@@ -1,6 +1,7 @@
+#include "problems.h"
 #include "primes.h"
 
-size_t problem3()
+size_t euler::problem3()
 {
 	const auto tester = 600851475143;
 	size_t result;
