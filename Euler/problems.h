@@ -9,5 +9,6 @@ size_t problem4();
 size_t problem7();
 size_t problem8();
 size_t problem9();
+size_t problem10();
 
 }

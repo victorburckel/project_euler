@@ -48,6 +48,9 @@
     <ClCompile Include="problem9.cpp">
       <Filter>Fichiers sources\problems</Filter>
     </ClCompile>
+    <ClCompile Include="problem10.cpp">
+      <Filter>Fichiers sources\problems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chunk_iterator.h">
