@@ -6,8 +6,6 @@
 #include <boost/range/algorithm/upper_bound.hpp>
 #include <boost/range/algorithm/find_if.hpp>
 
-#include <iostream>
-
 size_t euler::problem12()
 {
 	const auto init = { 2_u, 3_u };
