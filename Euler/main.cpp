@@ -18,7 +18,8 @@ void main()
 	PROBLEM( 9 );
 	PROBLEM( 10 );
 	PROBLEM( 11 );
-	PROBLEM( 12 ); */
-	PROBLEM( 13 );
+	PROBLEM( 12 ); 
+	PROBLEM( 13 )*/;
+PROBLEM( 14 );
 #undef PROBLEM
 }
