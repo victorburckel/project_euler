@@ -19,6 +19,9 @@
     <Filter Include="Fichiers sources\problems">
       <UniqueIdentifier>{deedc962-0e6b-4681-9ca6-3c39aa4efda6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\adaptors">
+      <UniqueIdentifier>{5daf121c-e5d4-4067-8598-8b954f1225ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -72,6 +75,9 @@
     <ClCompile Include="problem17.cpp">
       <Filter>Fichiers sources\problems</Filter>
     </ClCompile>
+    <ClCompile Include="problem18.cpp">
+      <Filter>Fichiers sources\problems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chunk_iterator.h">
@@ -89,10 +95,21 @@
     <ClInclude Include="literals.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="vector_adaptor.h">
+      <Filter>Fichiers d%27en-tête\adaptors</Filter>
+    </ClInclude>
+    <ClInclude Include="skip_adaptor.h">
+      <Filter>Fichiers d%27en-tête\iterators</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Base.props">
       <Filter>Fichiers sources</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="p067_triangle.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
   </ItemGroup>
 </Project>
