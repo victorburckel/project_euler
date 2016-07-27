@@ -78,6 +78,9 @@
     <ClCompile Include="problem18.cpp">
       <Filter>Fichiers sources\problems</Filter>
     </ClCompile>
+    <ClCompile Include="problem19.cpp">
+      <Filter>Fichiers sources\problems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chunk_iterator.h">
@@ -98,8 +101,14 @@
     <ClInclude Include="vector_adaptor.h">
       <Filter>Fichiers d%27en-tête\adaptors</Filter>
     </ClInclude>
-    <ClInclude Include="skip_adaptor.h">
+    <ClInclude Include="repeat_iterator.h">
       <Filter>Fichiers d%27en-tête\iterators</Filter>
+    </ClInclude>
+    <ClInclude Include="skip_adaptor.h">
+      <Filter>Fichiers d%27en-tête\adaptors</Filter>
+    </ClInclude>
+    <ClInclude Include="ostream_adaptor.h">
+      <Filter>Fichiers d%27en-tête\adaptors</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

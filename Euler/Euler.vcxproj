@@ -148,6 +148,7 @@
     <ClCompile Include="problem16.cpp" />
     <ClCompile Include="problem17.cpp" />
     <ClCompile Include="problem18.cpp" />
+    <ClCompile Include="problem19.cpp" />
     <ClCompile Include="problem2.cpp" />
     <ClCompile Include="problem3.cpp" />
     <ClCompile Include="problem4.cpp" />
@@ -161,7 +162,9 @@
     <ClInclude Include="literals.h" />
     <ClInclude Include="primes.h" />
     <ClInclude Include="problems.h" />
+    <ClInclude Include="repeat_iterator.h" />
     <ClInclude Include="skip_adaptor.h" />
+    <ClInclude Include="ostream_adaptor.h" />
     <ClInclude Include="vector_adaptor.h" />
   </ItemGroup>
   <ItemGroup>
