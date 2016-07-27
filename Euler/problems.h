@@ -1,24 +1,14 @@
 #pragma once
+#include <boost/preprocessor/repeat.hpp>
+#include <boost/preprocessor/arithmetic/add.hpp>
 
 namespace euler {
 
-size_t problem1();
-size_t problem2();
-size_t problem3();
-size_t problem4();
-size_t problem7();
-size_t problem8();
-size_t problem9();
-size_t problem10();
-size_t problem11();
-size_t problem12();
-size_t problem13();
-size_t problem14();
-size_t problem15();
-size_t problem16();
-size_t problem17();
-size_t problem18();
-size_t problem19();
+#define PROBLEM( z, n, data ) size_t BOOST_PP_CAT( problem, BOOST_PP_ADD( n, 1 ) ) ();
+BOOST_PP_REPEAT( 25, PROBLEM, ~ )
+#undef PROBLEM
+
+
 size_t problem67();
 
 }
