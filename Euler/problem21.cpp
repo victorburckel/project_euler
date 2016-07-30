@@ -35,6 +35,17 @@ std::vector< prime_factor > getPrimeFactors( size_t n )
 	return result;
 }
 
+size_t sigma( prime_factor factor )
+{
+	return ( static_cast< size_t >( std::pow( factor.prime, factor.factor + 1 ) ) - 1 ) / ( factor.prime - 1 );
+}
+
+size_t getSumOfProperDivisorsAlt( size_t n )
+{
+	const auto factors = getPrimeFactors( n );
+	return boost::accumulate( factors, 1_u, []( size_t total, const prime_factor& factor ) { return total * sigma( factor ); } ) - n;
+}
+
 std::vector< size_t > getDivisors( size_t n )
 {
 	const auto factors = getPrimeFactors( n );
@@ -76,10 +87,10 @@ size_t getSumOfProperDivisors( size_t n )
 
 size_t euler::problem21()
 {
-	assert( getSumOfProperDivisors( 220_u ) == 284_u );
-	assert( getSumOfProperDivisors( 284_u ) == 220_u );
+	assert( getSumOfProperDivisorsAlt( 220_u ) == 284_u );
+	assert( getSumOfProperDivisorsAlt( 284_u ) == 220_u );
 	
-	std::vector< size_t > sums = boost::irange( 2_u, 10000_u ) | boost::adaptors::transformed( &getSumOfProperDivisors ) | to_vector;
+	std::vector< size_t > sums = boost::irange( 2_u, 10000_u ) | boost::adaptors::transformed( &getSumOfProperDivisorsAlt ) | to_vector;
 
 	auto result = 0_u;
 	const auto size = sums.size();
