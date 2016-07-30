@@ -87,6 +87,9 @@
     <ClCompile Include="problem21.cpp">
       <Filter>Fichiers sources\problems</Filter>
     </ClCompile>
+    <ClCompile Include="problem22.cpp">
+      <Filter>Fichiers sources\problems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chunk_iterator.h">
@@ -124,6 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="p067_triangle.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
+    <Text Include="p022_names.txt">
       <Filter>Fichiers de ressources</Filter>
     </Text>
   </ItemGroup>

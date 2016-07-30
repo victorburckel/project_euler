@@ -152,6 +152,7 @@
     <ClCompile Include="problem2.cpp" />
     <ClCompile Include="problem20.cpp" />
     <ClCompile Include="problem21.cpp" />
+    <ClCompile Include="problem22.cpp" />
     <ClCompile Include="problem3.cpp" />
     <ClCompile Include="problem4.cpp" />
     <ClCompile Include="problem7.cpp" />
@@ -173,6 +174,7 @@
     <None Include="Base.props" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="p022_names.txt" />
     <Text Include="p067_triangle.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

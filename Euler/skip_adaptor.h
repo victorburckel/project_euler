@@ -19,7 +19,7 @@ inline auto operator|( const Range& r, const skip_adaptor& s )
 
 }
 
-detail::skip_adaptor skip( size_t n )
+inline detail::skip_adaptor skip( size_t n )
 {
 	return detail::skip_adaptor{ n };
 }
