@@ -9,6 +9,6 @@ void problem5()
 void main()
 {
 #define PROBLEM( i ) std::cout << "problem" #i ": " << euler::problem ## i() << std::endl;
-	PROBLEM( 20 );
+	PROBLEM( 21 );
 #undef PROBLEM
 }
