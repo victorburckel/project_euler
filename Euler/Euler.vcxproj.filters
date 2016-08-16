@@ -102,6 +102,9 @@
     <ClCompile Include="euler.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="problem25.cpp">
+      <Filter>Fichiers sources\problems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chunk_iterator.h">
