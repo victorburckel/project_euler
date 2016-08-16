@@ -1,5 +1,4 @@
-#include "problems.h"
-#include "literals.h"
+#include "euler.h"
 #include <boost/math/special_functions/factorials.hpp>
 
 namespace {

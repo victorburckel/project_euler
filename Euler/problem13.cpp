@@ -1,11 +1,5 @@
-#include "problems.h"
-#include "literals.h"
-#include <boost/range/irange.hpp>
-#include <boost/range/adaptor/transformed.hpp>
+#include "euler.h"
 #include <boost/range/adaptor/reversed.hpp>
-#include <boost/range/numeric.hpp>
-#include <boost/lexical_cast.hpp>
-#include <vector>
 
 size_t euler::problem13()
 {

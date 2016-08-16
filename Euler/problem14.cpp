@@ -1,9 +1,5 @@
-#include "problems.h"
-#include "literals.h"
+#include "euler.h"
 #include <boost/range/algorithm/max_element.hpp>
-#include <boost/range/irange.hpp>
-#include <boost/range/adaptor/transformed.hpp>
-#include <assert.h>
 
 namespace {
 

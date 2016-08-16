@@ -1,6 +1,4 @@
-#include "problems.h"
-#include "literals.h"
-#include <boost/range/irange.hpp>
+#include "euler.h"
 #include <functional>
 
 size_t euler::problem19()

@@ -1,14 +1,8 @@
-#include "problems.h"
-#include "literals.h"
-#include "vector_adaptor.h"
+#include "euler.h"
 #include "skip_adaptor.h"
-#include <boost/range/adaptor/transformed.hpp>
 #include <boost/range/adaptor/reversed.hpp>
 #include <boost/algorithm/string/split.hpp>
 #include <boost/algorithm/string/classification.hpp>
-#include <boost/lexical_cast.hpp>
-#include <iostream>
-#include <vector>
 #include <fstream>
 
 using namespace boost::adaptors;

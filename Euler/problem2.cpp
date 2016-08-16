@@ -1,4 +1,4 @@
-#include "problems.h"
+#include "euler.h"
 #include <array>
 
 size_t euler::problem2()

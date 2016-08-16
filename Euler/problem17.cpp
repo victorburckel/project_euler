@@ -1,8 +1,4 @@
-#include "problems.h"
-#include "literals.h"
-#include <boost/range/numeric.hpp>
-#include <boost/range/iterator_range_core.hpp>
-#include <string>
+#include "euler.h"
 #include <array>
 
 size_t euler::problem17()

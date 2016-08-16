@@ -1,14 +1,10 @@
-#include "problems.h"
-#include "literals.h"
+#include "euler.h"
 #include "skip_adaptor.h"
 #include <boost/algorithm/string/split.hpp>
 #include <boost/algorithm/string/classification.hpp>
-#include <boost/range/numeric.hpp>
 #include <boost/range/algorithm/equal_range.hpp>
-#include <boost/range/irange.hpp>
 #include <boost/range/combine.hpp>
 #include <fstream>
-#include <vector>
 
 namespace {
 

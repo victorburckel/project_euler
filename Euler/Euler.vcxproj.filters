@@ -90,6 +90,18 @@
     <ClCompile Include="problem22.cpp">
       <Filter>Fichiers sources\problems</Filter>
     </ClCompile>
+    <ClCompile Include="problem24.cpp">
+      <Filter>Fichiers sources\problems</Filter>
+    </ClCompile>
+    <ClCompile Include="problem23.cpp">
+      <Filter>Fichiers sources\problems</Filter>
+    </ClCompile>
+    <ClCompile Include="divisors.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="euler.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chunk_iterator.h">
@@ -118,6 +130,12 @@
     </ClInclude>
     <ClInclude Include="ostream_adaptor.h">
       <Filter>Fichiers d%27en-tête\adaptors</Filter>
+    </ClInclude>
+    <ClInclude Include="divisors.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="euler.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

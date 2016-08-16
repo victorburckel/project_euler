@@ -1,8 +1,6 @@
-#include "problems.h"
-#include "literals.h"
+#include "euler.h"
 #include "primes.h"
 
-#include <boost/range/numeric.hpp>
 #include <boost/range/algorithm/upper_bound.hpp>
 #include <boost/range/algorithm/find_if.hpp>
 

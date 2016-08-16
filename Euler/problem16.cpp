@@ -1,8 +1,5 @@
-#include "problems.h"
-#include "literals.h"
+#include "euler.h"
 #include <boost/multiprecision/cpp_int.hpp>
-#include <boost/range/numeric.hpp>
-#include <boost/lexical_cast.hpp>
 
 namespace {
 

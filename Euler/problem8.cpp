@@ -1,8 +1,4 @@
-#include "problems.h"
-#include "literals.h"
-#include <vector>
-#include <numeric>
-#include <algorithm>
+#include "euler.h"
 
 size_t euler::problem8()
 {

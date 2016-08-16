@@ -1,4 +1,4 @@
-#include "problems.h"
+#include "euler.h"
 #include "primes.h"
 
 size_t euler::problem7()

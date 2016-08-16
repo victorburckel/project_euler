@@ -1,9 +1,6 @@
-#include "problems.h"
-#include "literals.h"
+#include "euler.h"
 #include "primes.h"
-#include <boost/range/numeric.hpp>
 #include <boost/coroutine/asymmetric_coroutine.hpp>
-#include <boost/range/adaptor/filtered.hpp>
 
 size_t euler::problem10()
 {

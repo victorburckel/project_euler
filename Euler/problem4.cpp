@@ -1,11 +1,7 @@
-#include "problems.h"
+#include "euler.h"
 #include "cross_product_iterator.h"
-#include "literals.h"
-#include <boost/range/irange.hpp>
 #include <boost/range/algorithm/max_element.hpp>
 #include <boost/range/algorithm/mismatch.hpp>
-#include <boost/range/adaptor/filtered.hpp>
-#include <boost/range/adaptor/transformed.hpp>
 #include <string>
 
 size_t euler::problem4()
