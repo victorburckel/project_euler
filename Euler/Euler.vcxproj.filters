@@ -22,79 +22,19 @@
     <Filter Include="Fichiers d%27en-tête\adaptors">
       <UniqueIdentifier>{5daf121c-e5d4-4067-8598-8b954f1225ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\problems\level1">
+      <UniqueIdentifier>{a303fbf7-ae6d-49b9-9095-20a841d5c8e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\problems\level2">
+      <UniqueIdentifier>{7cc428da-cdf6-4ffc-99c5-33a663c9bf0e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="problem1.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem3.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem4.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
     <ClCompile Include="primes.cpp">
       <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem8.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem9.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem10.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem11.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem12.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem13.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem14.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem15.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem16.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem17.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem18.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem19.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem20.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem21.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem22.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem24.cpp">
-      <Filter>Fichiers sources\problems</Filter>
-    </ClCompile>
-    <ClCompile Include="problem23.cpp">
-      <Filter>Fichiers sources\problems</Filter>
     </ClCompile>
     <ClCompile Include="divisors.cpp">
       <Filter>Fichiers sources</Filter>
@@ -103,7 +43,76 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="problem25.cpp">
-      <Filter>Fichiers sources\problems</Filter>
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem1.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem2.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem3.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem4.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem7.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem8.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem9.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem10.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem11.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem12.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem13.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem14.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem15.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem16.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem17.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem18.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem19.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem20.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem21.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem22.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem23.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem24.cpp">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClCompile>
+    <ClCompile Include="problem26.cpp">
+      <Filter>Fichiers sources\problems\level2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +148,9 @@
     </ClInclude>
     <ClInclude Include="euler.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="sorted_adaptor.h">
+      <Filter>Fichiers d%27en-tête\adaptors</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

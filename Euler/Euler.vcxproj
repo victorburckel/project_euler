@@ -185,6 +185,7 @@
     <ClCompile Include="problem22.cpp" />
     <ClCompile Include="problem23.cpp" />
     <ClCompile Include="problem24.cpp" />
+    <ClCompile Include="problem26.cpp" />
     <ClCompile Include="problem3.cpp" />
     <ClCompile Include="problem4.cpp" />
     <ClCompile Include="problem7.cpp" />
@@ -203,6 +204,7 @@
     <ClInclude Include="repeat_iterator.h" />
     <ClInclude Include="skip_adaptor.h" />
     <ClInclude Include="ostream_adaptor.h" />
+    <ClInclude Include="sorted_adaptor.h" />
     <ClInclude Include="vector_adaptor.h" />
   </ItemGroup>
   <ItemGroup>
