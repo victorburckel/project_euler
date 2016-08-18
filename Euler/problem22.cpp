@@ -1,4 +1,5 @@
 #include "euler.h"
+#include "level1.h"
 #include "skip_adaptor.h"
 #include <boost/algorithm/string/split.hpp>
 #include <boost/algorithm/string/classification.hpp>

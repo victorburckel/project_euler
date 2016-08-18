@@ -118,6 +118,3 @@ inline void generate_primes( F&& sink, size_t n, const std::vector< size_t >& pr
 		primeQuotient = nextPrimeQuotient;
 	}
 }
-
-bool test_primes();
-void bench_primes();

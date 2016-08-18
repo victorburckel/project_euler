@@ -1,4 +1,5 @@
 #include "euler.h"
+#include "level1.h"
 #include <boost/range/algorithm/max_element.hpp>
 
 namespace {

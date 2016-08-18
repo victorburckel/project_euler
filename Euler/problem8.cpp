@@ -1,4 +1,5 @@
 #include "euler.h"
+#include "level1.h"
 
 size_t euler::problem8()
 {

@@ -1,4 +1,5 @@
 #include "euler.h"
+#include "level1.h"
 #include <boost/range/algorithm/find_if.hpp>
 
 size_t euler::problem9()

@@ -1,4 +1,5 @@
 #include "euler.h"
+#include "level1.h"
 #include "primes.h"
 
 #include <boost/range/algorithm/upper_bound.hpp>

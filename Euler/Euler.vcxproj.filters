@@ -13,20 +13,20 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\iterators">
-      <UniqueIdentifier>{aa0bd96c-4279-46d7-9152-e4de955c3fbd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers sources\problems">
       <UniqueIdentifier>{deedc962-0e6b-4681-9ca6-3c39aa4efda6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\adaptors">
-      <UniqueIdentifier>{5daf121c-e5d4-4067-8598-8b954f1225ba}</UniqueIdentifier>
     </Filter>
     <Filter Include="Fichiers sources\problems\level1">
       <UniqueIdentifier>{a303fbf7-ae6d-49b9-9095-20a841d5c8e0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Fichiers sources\problems\level2">
       <UniqueIdentifier>{7cc428da-cdf6-4ffc-99c5-33a663c9bf0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\adaptors">
+      <UniqueIdentifier>{5daf121c-e5d4-4067-8598-8b954f1225ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\iterators">
+      <UniqueIdentifier>{aa0bd96c-4279-46d7-9152-e4de955c3fbd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -114,43 +114,49 @@
     <ClCompile Include="problem26.cpp">
       <Filter>Fichiers sources\problems\level2</Filter>
     </ClCompile>
+    <ClCompile Include="problem27.cpp">
+      <Filter>Fichiers sources\problems\level2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chunk_iterator.h">
-      <Filter>Fichiers d%27en-tête\iterators</Filter>
+      <Filter>Fichiers sources\iterators</Filter>
     </ClInclude>
     <ClInclude Include="cross_product_iterator.h">
-      <Filter>Fichiers d%27en-tête\iterators</Filter>
-    </ClInclude>
-    <ClInclude Include="problems.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="primes.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="literals.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers sources\iterators</Filter>
     </ClInclude>
     <ClInclude Include="vector_adaptor.h">
-      <Filter>Fichiers d%27en-tête\adaptors</Filter>
+      <Filter>Fichiers sources\adaptors</Filter>
     </ClInclude>
     <ClInclude Include="repeat_iterator.h">
-      <Filter>Fichiers d%27en-tête\iterators</Filter>
+      <Filter>Fichiers sources\iterators</Filter>
     </ClInclude>
     <ClInclude Include="skip_adaptor.h">
-      <Filter>Fichiers d%27en-tête\adaptors</Filter>
+      <Filter>Fichiers sources\adaptors</Filter>
     </ClInclude>
     <ClInclude Include="ostream_adaptor.h">
-      <Filter>Fichiers d%27en-tête\adaptors</Filter>
-    </ClInclude>
-    <ClInclude Include="divisors.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="euler.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers sources\adaptors</Filter>
     </ClInclude>
     <ClInclude Include="sorted_adaptor.h">
-      <Filter>Fichiers d%27en-tête\adaptors</Filter>
+      <Filter>Fichiers sources\adaptors</Filter>
+    </ClInclude>
+    <ClInclude Include="level1.h">
+      <Filter>Fichiers sources\problems\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="level2.h">
+      <Filter>Fichiers sources\problems\level2</Filter>
+    </ClInclude>
+    <ClInclude Include="primes.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="divisors.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="euler.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="literals.h">
+      <Filter>Fichiers sources</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

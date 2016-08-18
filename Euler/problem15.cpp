@@ -1,4 +1,5 @@
 #include "euler.h"
+#include "level1.h"
 #include <boost/math/special_functions/factorials.hpp>
 
 namespace {

@@ -1,4 +1,5 @@
 #include "euler.h"
+#include "level2.h"
 #include "sorted_adaptor.h"
 #include <boost/range/adaptor/uniqued.hpp>
 #include <boost/range/algorithm/max_element.hpp>

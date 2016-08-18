@@ -1,4 +1,5 @@
 #include "euler.h"
+#include "level1.h"
 #include <boost/range/adaptor/reversed.hpp>
 
 size_t euler::problem13()

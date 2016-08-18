@@ -186,6 +186,7 @@
     <ClCompile Include="problem23.cpp" />
     <ClCompile Include="problem24.cpp" />
     <ClCompile Include="problem26.cpp" />
+    <ClCompile Include="problem27.cpp" />
     <ClCompile Include="problem3.cpp" />
     <ClCompile Include="problem4.cpp" />
     <ClCompile Include="problem7.cpp" />
@@ -198,9 +199,10 @@
     <ClInclude Include="cross_product_iterator.h" />
     <ClInclude Include="divisors.h" />
     <ClInclude Include="euler.h" />
+    <ClInclude Include="level2.h" />
     <ClInclude Include="literals.h" />
     <ClInclude Include="primes.h" />
-    <ClInclude Include="problems.h" />
+    <ClInclude Include="level1.h" />
     <ClInclude Include="repeat_iterator.h" />
     <ClInclude Include="skip_adaptor.h" />
     <ClInclude Include="ostream_adaptor.h" />
