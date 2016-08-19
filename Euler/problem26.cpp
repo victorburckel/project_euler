@@ -50,7 +50,7 @@ size_t euler::problem26()
 	return *boost::max_element(
 		boost::irange( 3_u, 1001_u ) |
 		boost::adaptors::transformed( &reduce ) |
-		sorted |
+		sorted() |
 		boost::adaptors::uniqued |
 		boost::adaptors::transformed( &cycle_length ) ).base().base();
 }

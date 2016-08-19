@@ -6,13 +6,17 @@
 namespace euler {
 namespace detail {
 
-struct sorted_adaptor {};
+template< typename Less >
+struct sorted_adaptor
+{
+	Less less;
+};
 
-template< typename Range >
-inline auto operator|( const Range& r, const sorted_adaptor& )
+template< typename Range, typename Less >
+inline auto operator|( const Range& r, const sorted_adaptor< Less >& s )
 {
 	auto v = r | to_vector;
-	std::sort( v.begin(), v.end() );
+	std::sort( v.begin(), v.end(), s.less );
 	return v;
 }
 
@@ -20,7 +24,16 @@ inline auto operator|( const Range& r, const sorted_adaptor& )
 
 namespace {
 
-const auto sorted = detail::sorted_adaptor();
+template< typename Less >
+auto sorted( Less less )
+{
+	return detail::sorted_adaptor< Less >{ less };
+}
+
+auto sorted()
+{
+	return sorted( []( auto&& l, auto&& r ) { return l < r; } );
+}
 
 }
 

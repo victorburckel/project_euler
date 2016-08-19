@@ -7,7 +7,7 @@
 
 size_t euler::problem4()
 {
-	struct multiply { auto operator()( std::tuple< size_t&, size_t& > element ) const { return std::get< 0 >( element ) * std::get< 1 >( element ); } };
+	struct multiply { auto operator()( std::tuple< size_t, size_t > element ) const { return std::get< 0 >( element ) * std::get< 1 >( element ); } };
 	struct is_palindrome { bool operator()( size_t i ) const { auto s = std::to_string( i ); return std::equal( s.begin(), s.end(), s.rbegin() ); } };
 
 	const auto result = *boost::max_element(

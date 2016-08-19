@@ -5,7 +5,7 @@
 #include <tuple>
 
 template< typename It1, typename It2 >
-class cross_product_iterator : public boost::iterator_facade< cross_product_iterator< It1, It2 >, std::tuple< typename It1::value_type&, typename It2::value_type& >, boost::forward_traversal_tag, std::tuple< typename It1::value_type&, typename It2::value_type& > >
+class cross_product_iterator : public boost::iterator_facade< cross_product_iterator< It1, It2 >, std::tuple< typename It1::reference, typename It2::reference >, boost::forward_traversal_tag, std::tuple< typename It1::reference, typename It2::reference > >
 {
 public:
 	cross_product_iterator()
@@ -42,7 +42,7 @@ private:
 		}
 	}
 
-	std::tuple< typename It1::value_type&, typename It2::value_type& > dereference() const
+	std::tuple< typename It1::reference, typename It2::reference > dereference() const
 	{
 		return std::forward_as_tuple( *_it1, *_it2 );
 	}

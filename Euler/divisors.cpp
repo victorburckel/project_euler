@@ -7,13 +7,27 @@
 
 namespace {
 
-struct prime_factor
+size_t sigma( euler::prime_factor factor )
 {
-	unsigned prime;
-	unsigned factor;
-};
+	return ( static_cast< size_t >( std::pow( factor.prime, factor.factor + 1 ) ) - 1 ) / ( factor.prime - 1 );
+}
 
-std::vector< prime_factor > getPrimeFactors( size_t n )
+}
+
+bool euler::prime_factor::operator<( const prime_factor& other ) const
+{
+	if( prime != other.prime )
+		return prime < other.prime;
+
+	return factor < other.factor;
+}
+
+bool euler::prime_factor::operator==( const prime_factor& other ) const
+{
+	return prime == other.prime && factor == other.factor;
+}
+
+std::vector< euler::prime_factor > euler::getPrimeFactors( size_t n )
 {
 	std::vector< prime_factor > result;
 	for( unsigned count = 0u, prime = boost::math::prime( count ); prime <= n; prime = boost::math::prime( ++count ) )
@@ -30,13 +44,6 @@ std::vector< prime_factor > getPrimeFactors( size_t n )
 	}
 
 	return result;
-}
-
-size_t sigma( prime_factor factor )
-{
-	return ( static_cast< size_t >( std::pow( factor.prime, factor.factor + 1 ) ) - 1 ) / ( factor.prime - 1 );
-}
-
 }
 
 size_t euler::getSumOfProperDivisorsAlt( size_t n )
