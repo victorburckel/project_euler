@@ -12,7 +12,8 @@ struct to_ostream_adaptor { std::ostream& o; Elem* s; };
 template< typename Range, typename Elem >
 inline void operator|( Range&& r, const to_ostream_adaptor< Elem >& o )
 {
-	boost::copy( r, std::ostream_iterator< typename Range::value_type >( o.o, o.s ) );
+	typedef typename std::decay< Range >::type range_t;
+	boost::copy( r, std::ostream_iterator< typename range_t::value_type >( o.o, o.s ) );
 }
 
 }
