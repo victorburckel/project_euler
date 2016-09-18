@@ -193,6 +193,7 @@
     <ClCompile Include="problem30.cpp" />
     <ClCompile Include="problem31.cpp" />
     <ClCompile Include="problem32.cpp" />
+    <ClCompile Include="problem33.cpp" />
     <ClCompile Include="problem4.cpp" />
     <ClCompile Include="problem7.cpp" />
     <ClCompile Include="problem8.cpp" />
@@ -201,6 +202,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chunk_iterator.h" />
+    <ClInclude Include="combinations.h" />
     <ClInclude Include="cross_product_iterator.h" />
     <ClInclude Include="divisors.h" />
     <ClInclude Include="euler.h" />

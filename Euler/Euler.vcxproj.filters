@@ -132,6 +132,9 @@
     <ClCompile Include="problem32.cpp">
       <Filter>Fichiers sources\problems\level2</Filter>
     </ClCompile>
+    <ClCompile Include="problem33.cpp">
+      <Filter>Fichiers sources\problems\level2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chunk_iterator.h">
@@ -171,6 +174,9 @@
       <Filter>Fichiers sources</Filter>
     </ClInclude>
     <ClInclude Include="literals.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="combinations.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
   </ItemGroup>

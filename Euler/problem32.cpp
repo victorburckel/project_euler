@@ -1,55 +1,7 @@
 #include "euler.h"
 #include "level2.h"
-#include <boost/range/algorithm/copy.hpp>
-#include <boost/range/algorithm/permutation.hpp>
-#include <boost/range/combine.hpp>
-#include <boost/coroutine/asymmetric_coroutine.hpp>
+#include "combinations.h"
 #include <set>
-
-namespace {
-
-typedef boost::coroutines::asymmetric_coroutine< std::vector< int > > coro_t;
-
-void combinations_generator( coro_t::push_type& sink, const std::vector< int >& digits, size_t n )
-{
-	std::vector< bool > v( digits.size() );
-	std::fill( v.end() - n, v.end(), true );
-	do
-	{
-		sink( boost::combine( v, digits )
-			| boost::adaptors::filtered( []( const auto& e ) { return boost::get< 0 >( e ); } )
-			| boost::adaptors::transformed( []( const auto& e ) { return boost::get< 1 >( e ); } )
-			| euler::to_vector );
-	} while( boost::next_permutation( v ) );
-}
-
-void arragements_generator( coro_t::push_type& sink, std::vector< int > digits )
-{
-	std::sort( digits.begin(), digits.end() );
-	do
-	{
-		sink( digits );
-	} while( boost::next_permutation( digits ) );
-}
-
-void arragements_generator( coro_t::push_type& sink, const std::vector< int >& digits, size_t n )
-{
-	coro_t::pull_type combinations( [ &digits, n ]( coro_t::push_type& sink ) {
-		combinations_generator( sink, digits, n );
-	} );
-
-	for( const auto& combination : combinations )
-	{
-		coro_t::pull_type arrangements( [ &combination ]( coro_t::push_type& sink ) {
-			arragements_generator( sink, combination );
-		} );
-		
-		for( const auto& arrangement : arrangements )
-			sink( arrangement );
-	}
-}
-
-}
 
 size_t euler::problem32()
 {
@@ -70,7 +22,7 @@ size_t euler::problem32()
 
 	// p = 5 - n
 
-	coro_t::pull_type arragements( []( coro_t::push_type& sink ) {
+	coro_t< int >::pull_type arragements( []( coro_t< int >::push_type& sink ) {
 		arragements_generator( sink, boost::irange( 1, 10 ) | to_vector );
 	} );
 
