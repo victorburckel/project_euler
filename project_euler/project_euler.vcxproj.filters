@@ -135,6 +135,9 @@
     <ClCompile Include="problem33.cpp">
       <Filter>Fichiers sources\problems\level2</Filter>
     </ClCompile>
+    <ClCompile Include="problem34.cpp">
+      <Filter>Fichiers sources\problems\level2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chunk_iterator.h">

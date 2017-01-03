@@ -4,6 +4,8 @@
 #include <boost/coroutine/asymmetric_coroutine.hpp>
 #include <boost/range/combine.hpp>
 #include <boost/range/algorithm/permutation.hpp>
+#include <boost/range/algorithm/find_if.hpp>
+#include <boost/range/algorithm/fill.hpp>
 #include <boost/range/adaptor/filtered.hpp>
 #include <boost/range/adaptor/transformed.hpp>
 #include <vector>
@@ -55,6 +57,35 @@ inline void arragements_generator( typename coro_t< T >::push_type& sink, const 
 
 		for( const auto& arrangement : arrangements )
 			sink( arrangement );
+	}
+}
+
+template< typename T >
+inline void number_generator( typename coro_t< T >::push_type& sink, const std::vector< T >& digits, size_t n )
+{
+	std::vector< T > result( n, digits.front() );
+	std::vector< std::vector< T >::const_iterator > number( n, digits.begin() );
+
+	const auto begin = boost::make_zip_iterator( boost::make_tuple( number.rbegin(), result.rbegin() ) );
+	const auto end = boost::make_zip_iterator( boost::make_tuple( number.rend(), result.rend() ) );
+
+	auto numberIt = begin;
+	while( true )
+	{
+		for( auto& digitIt = boost::get< 0 >( *numberIt ); digitIt != digits.end(); ++digitIt )
+		{
+			boost::get< 1 >( *numberIt ) = *digitIt;
+			sink( result );
+		}
+
+		numberIt = boost::find_if( boost::make_iterator_range( std::next( numberIt ), end ), [ &digits ]( const auto it ) { return ++boost::get< 0 >( it ) != digits.end(); } );
+		if( numberIt == end )
+			return;
+
+		boost::get< 1 >( *numberIt ) = *boost::get< 0 >( *numberIt );
+
+		boost::fill( boost::make_iterator_range( begin, numberIt ), boost::make_tuple( digits.begin(), digits.front() ) );
+		numberIt = begin;
 	}
 }
 
