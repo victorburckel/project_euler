@@ -70,7 +70,7 @@ size_t euler::problem33()
 	assert( isDigitCancellingFraction( { 4,9 }, { 9,8 } ) );
 	assert( isDigitCancellingFraction( { 3,0 }, { 5,0 } ) );
 
-	const auto twoDigitNumbers = coro_t< int >::pull_type( []( coro_t< int >::push_type& sink ) { arragements_generator( sink, boost::irange( 0, 10 ) | to_vector, 2 );	} )
+	const auto twoDigitNumbers = coro_t< int >::pull_type( []( coro_t< int >::push_type& sink ) { number_generator( sink, boost::irange( 0, 10 ) | to_vector, 2 );	} )
 		| boost::adaptors::filtered( []( const auto& digits ) { return digits[ 0 ] != 0; } )
 		| to_vector;
 
