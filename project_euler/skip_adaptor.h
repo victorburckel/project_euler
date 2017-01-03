@@ -12,7 +12,7 @@ struct skip_adaptor
 };
 
 template< typename Range >
-inline auto operator|( const Range& r, const skip_adaptor& s )
+inline auto operator|( const Range& r, const skip_adaptor& s ) -> decltype( boost::make_iterator_range( std::next( r.begin(), s.n ), r.end() ) )
 {
 	return boost::make_iterator_range( std::next( r.begin(), s.n ), r.end() );
 }
